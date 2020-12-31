@@ -18,4 +18,4 @@ COPY --from=builder /go/src/syncthing_exporter/syncthing_exporter /usr/local/bin
 RUN addgroup -S exporter && adduser -S exporter -G exporter
 USER exporter
 
-CMD ["syncthing_exporter"]
+ENTRYPOINT ["syncthing_exporter"]
